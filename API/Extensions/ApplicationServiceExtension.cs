@@ -10,7 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace API.Extensions
 {
-    
+
     public static class ApplicationServiceExtension
     {
         public static IServiceCollection AddApplicationServices(this IServiceCollection services, IConfiguration config){
@@ -25,7 +25,7 @@ namespace API.Extensions
             services.AddDbContext<DataContext>(Options =>
              {
                  
-                    var env = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
+                var env = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
 
                     string connStr;
 
